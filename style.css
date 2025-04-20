@@ -1,0 +1,359 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #7dcef5;
+}
+
+/* Container to keep all sections aligned */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: white;
+    max-width: 600px;
+}
+
+/* About Section Styling */
+.about {
+    background-color: white;
+    padding: 60px 0;
+    margin-top: -50px; /* To lift the About Me section */
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+.about:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.about p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+    padding: 0 20px; /* Padding to make text not touch edges */
+    transition: color 0.3s ease; /* Smooth transition for text color change */
+}
+
+.about:hover p {
+    color: #0077cc; /* Change text color on hover */
+}
+
+
+/* Projects Section Styling */
+.projects {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #e6f3fa;
+    color: #0077cc;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Let's Connect Section Styling */
+.connect {
+    background-color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.connect h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    width: 60px;
+    height: 60px;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon:hover .instagram-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Instagram icon styling */
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 6px;
+    position: relative;
+}
+
+.instagram-icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.instagram-icon:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Email Icon styling */
+.email-icon {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Chatbot Section Styling */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.chatbot-message {
+    font-size: 14px;
+    color: #333;
+}
+
+.close-btn {
+    color: #999;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Visitor Count Section */
+.visitor-count {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: #666;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-left {
+    transform: translateX(-30px);
+    opacity: 0;
+    animation: fadeLeft 1s forwards;
+}
+
+@keyframes fadeLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-right {
+    transform: translateX(30px);
+    opacity: 0;
+    animation: fadeRight 1s forwards;
+}
+
+@keyframes fadeRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px);
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
